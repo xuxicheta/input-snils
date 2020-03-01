@@ -1,0 +1,23 @@
+section.form-wrapper {
+  display: flex;
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  border-radius: 6px;
+  padding: 15px 20px;
+  background-color: #eee;
+  width: 300px;
+  min-height: 150px;
+}
+
+.input-snils {
+  width: 100%;
+  display: block;
+}
+
+.ready-button[disabled] {
+  background: #d0d0d0;
+}

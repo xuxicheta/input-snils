@@ -1,0 +1,16 @@
+<mat-form-field appearance="outline">
+  <input
+    matInput
+    autocomplete="snils"
+    [formControl]="formControl"
+    [mask]="mask"
+    [dropSpecialCharacters]="false"
+    [placeholder]="placeholder"
+    [readonly]="readonly"
+    [required]="required"
+    [tabIndex]="tabIndex"
+  >
+  <mat-error [hidden]="formControl | snilsErrors: 'required'">СНИЛС необходимо заполнить</mat-error>
+  <mat-error [hidden]="formControl | snilsErrors: 'format'">СНИЛС не соответствует формату</mat-error>
+  <mat-error [hidden]="formControl | snilsErrors: 'snils'">СНИЛС ошибочен</mat-error>
+</mat-form-field>

@@ -1,0 +1,8 @@
+app-input-snils .mat-form-field {
+  width: 100%;
+}
+
+app-input-snils .mat-form-field-outline {
+  background: white;
+  border-radius: 6px;
+}
