@@ -17,7 +17,7 @@ export class FormPersistService {
   /**
    * @returns restored data if exists
    */
-  public registerForm(formName: string, form: AbstractControl): any {
+  public registerForm<T>(formName: string, form: AbstractControl): T {
     this.subscriptions[formName]?.unsubscribe();
     this.subscriptions[formName] = this.createFormSubscription(formName, form);
 
@@ -31,8 +31,8 @@ export class FormPersistService {
     delete this.subscriptions[formName];
   }
 
-  public restoreData(formName: string, form: AbstractControl): any {
-    const data = this.storageService.get(formName);
+  public restoreData<T>(formName: string, form: AbstractControl): T {
+    const data = this.storageService.get(formName) as T;
     if (data) {
       form.patchValue(data, { emitEvent: false });
     }
