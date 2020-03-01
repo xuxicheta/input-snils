@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { FormPersistModule } from './form-persist/form-persist.module';
 import { FormStatusesModule } from './form-statuses/form-statuses.module';
 import { InputSnilsModule } from './input-snils/input-snils.module';
-import { windowProvider } from './shared/window.provider';
-
 
 
 @NgModule({
@@ -25,9 +23,6 @@ import { windowProvider } from './shared/window.provider';
     MatButtonModule,
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
-  ],
-  providers: [
-    windowProvider,
   ],
   bootstrap: [AppComponent]
 })

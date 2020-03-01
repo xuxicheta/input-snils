@@ -1,12 +1,10 @@
-import { InjectionToken, FactoryProvider } from '@angular/core';
-
-export const WINDOW = new InjectionToken('Window');
+import { InjectionToken } from '@angular/core';
 
 export function getWindow() {
   return window;
 }
 
-export const windowProvider: FactoryProvider = {
-  provide: WINDOW,
-  useFactory: getWindow,
-};
+export const WINDOW = new InjectionToken('Window', {
+  providedIn: 'root',
+  factory: getWindow,
+});
